@@ -2,9 +2,10 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import { RouterProvider, createBrowserRouter } from 'react-router-dom'
 import App from './App'
-import FormHolder from './components/FormHolder'
 import './styles/index.scss'
 
+const rootElement = document.getElementById('root')
+if (!rootElement) throw new Error('Failed root')
 const router = createBrowserRouter([
 	{
 		path: '/',
@@ -13,10 +14,10 @@ const router = createBrowserRouter([
 	},
 	{
 		path: '/next',
-		element: <FormHolder />,
+		element: '',
 	},
 ])
-ReactDOM.createRoot(document.getElementById('root')!).render(
+ReactDOM.createRoot(rootElement).render(
 	<React.StrictMode>
 		<RouterProvider router={router} />
 	</React.StrictMode>
