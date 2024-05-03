@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import FormHolder from './components/FormHolder'
+import EmailEditor from '../../components/email-editor/EmailEditor'
 
 function App() {
 	const [propsHolder, setPropsHolder] = useState({
@@ -9,8 +9,8 @@ function App() {
 	return (
 		<>
 			<div>
-				<h1>Email EDITOR</h1>
-				<FormHolder propsHolder={propsHolder} setPropsHolder={setPropsHolder} />
+				<EmailEditor />
+				{/* <FormHolder propsHolder={propsHolder} setPropsHolder={setPropsHolder} /> */}
 			</div>
 		</>
 	)

@@ -1,0 +1,45 @@
+.editor {
+	background-color: #221f1f;
+	border-radius: 5px;
+	border: none;
+	min-width: 500px;
+	min-height: 200px;
+	padding: 10px 20px;
+	resize: none;
+	margin-top: 10px;
+}
+.wrapper {
+	display: flex;
+	flex-direction: column;
+}
+.showTools {
+	border: none;
+	outline: none;
+	background: transparent;
+	transition: 0.5s all;
+	cursor: pointer;
+}
+.showTools:hover {
+	transform: scale(1.5);
+}
+.tools {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	width: 100%;
+	border-radius: 5px;
+	background-color: #221f1f;
+	margin-top: 20px;
+	button {
+		border-radius: 3px;
+		border: 1px solid transparent;
+		font-size: 1em;
+		padding-top: 5px;
+		font-weight: 500;
+		font-family: inherit;
+		background-color: transparent;
+		color: #e6e6fa;
+		cursor: pointer;
+		transition: 0.5s all;
+	}
+}
