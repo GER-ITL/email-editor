@@ -8,10 +8,8 @@ function App() {
 	})
 	return (
 		<>
-			<div>
-				<EmailEditor />
-				{/* <FormHolder propsHolder={propsHolder} setPropsHolder={setPropsHolder} /> */}
-			</div>
+			<EmailEditor />
+			{/* <FormHolder propsHolder={propsHolder} setPropsHolder={setPropsHolder} /> */}
 		</>
 	)
 }

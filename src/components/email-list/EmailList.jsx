@@ -1,12 +1,9 @@
-import parse from 'html-react-parser'
 import React from 'react'
-import styles from './EmailList.module.scss'
 
-const EmailList = ({ text }) => {
+const EmailList = () => {
 	return (
 		<div>
-			<h1>preview</h1>
-			<div className={styles.list}>{parse(text)}</div>
+			<h1>Emails</h1>
 		</div>
 	)
 }

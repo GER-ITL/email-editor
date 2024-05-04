@@ -1,6 +1,7 @@
 import { Bold, Eraser, Italic, Settings, Underline } from 'lucide-react'
 import React, { useRef, useState } from 'react'
-import EmailList from '../email-list/EmailList'
+import { Link } from 'react-router-dom'
+import PrevList from '../prev-list/PrevList'
 import style from './EmailEditor.module.scss'
 import { applyStyle } from './apply-style'
 const EmailEditor = () => {
@@ -17,6 +18,11 @@ const EmailEditor = () => {
 	const [text, setText] = useState('')
 	const [show, setShow] = useState(true)
 
+	// const { data } = useQuery({
+	// 	queryKey: ['email list'],
+	// 	queryFn: () => emailService.getEmails(),
+	// })
+	// console.log('data', data)
 	const applyFormat = type => {
 		const selectedText = text.substring(selectionStart, selectionEnd)
 		if (!selectedText) return
@@ -56,13 +62,15 @@ const EmailEditor = () => {
 							<Underline />
 						</button>
 
-						<button>Send now</button>
+						<Link to='messages'>
+							<button>Send now</button>
+						</Link>
 					</div>
 				) : (
 					''
 				)}
 			</div>
-			{text && <EmailList text={text} />}
+			{text && <PrevList text={text} />}
 		</div>
 	)
 }
