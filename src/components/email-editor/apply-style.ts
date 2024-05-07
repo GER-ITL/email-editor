@@ -1,4 +1,4 @@
-export const applyStyle = (type, selectedText) => {
+export const applyStyle = (type: string, selectedText: any) => {
 	let formattedText = selectedText
 
 	switch (type) {

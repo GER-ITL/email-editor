@@ -1,18 +1,18 @@
 import { Bold, Eraser, Italic, Settings, Underline } from 'lucide-react'
-import React, { useRef, useState } from 'react'
+import { useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
 import PrevList from '../prev-list/PrevList'
 import style from './EmailEditor.module.scss'
 import { applyStyle } from './apply-style'
 const EmailEditor = () => {
-	const inputRef = useRef(null)
+	const inputRef = useRef<HTMLTextAreaElement | null>(null)
 	const [selectionStart, setSelectionStart] = useState(0)
 	const [selectionEnd, setSelectionEnd] = useState(0)
 
 	const updateSelection = () => {
 		if (!inputRef.current) return
-		setSelectionStart(inputRef.current.selectionStart)
-		setSelectionEnd(inputRef.current.selectionEnd)
+		setSelectionStart(inputRef.current?.selectionStart)
+		setSelectionEnd(inputRef.current?.selectionEnd)
 	}
 
 	const [text, setText] = useState('')
@@ -23,7 +23,7 @@ const EmailEditor = () => {
 	// 	queryFn: () => emailService.getEmails(),
 	// })
 	// console.log('data', data)
-	const applyFormat = type => {
+	const applyFormat = (type: 'bold' | 'italic' | 'underline') => {
 		const selectedText = text.substring(selectionStart, selectionEnd)
 		if (!selectedText) return
 		const before = text.substring(0, selectionStart)
