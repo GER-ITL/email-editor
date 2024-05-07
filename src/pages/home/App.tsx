@@ -1,11 +1,10 @@
-import { useState } from 'react'
 import EmailEditor from '../../components/email-editor/EmailEditor'
 
 function App() {
-	const [propsHolder, setPropsHolder] = useState({
-		textHolder: 'Holder',
-		value: '...',
-	})
+	// const [propsHolder, setPropsHolder] = useState({
+	// 	textHolder: 'Holder',
+	// 	value: '...',
+	// })
 	return (
 		<>
 			<EmailEditor />
